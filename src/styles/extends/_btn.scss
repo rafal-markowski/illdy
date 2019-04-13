@@ -1,0 +1,38 @@
+%btn {
+    padding: 1rem 4rem;
+    font: 700 1em / 1em $primary-font;
+    border: none;
+    color: c('white');
+    cursor: pointer;
+
+    &--link {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    &--rounded {
+        border-radius: 4px;
+    }
+
+    &--big {
+        min-width: 240px;
+        padding: 1.5rem 4.5rem;
+    }
+
+    &--transparent {
+        border: b('white');
+        background: bg('black-2');
+
+        &:hover {
+            background: bg('black-3');
+        }
+    }
+
+    &--gold {
+        background: bg('gold');
+
+        &:hover {
+            background: bg('purple');
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@function c($key) {
+    @if NOT map-has-key($c, $key) {
+        @error 'Invalid key: #{$key}';
+    }
+    @return map-get($c, $key);
+}
+
+@function bg($key) {
+    @if NOT map-has-key($bg, $key) {
+        @error 'Invalid key: #{$key}';
+    }
+    @return map-get($bg, $key);
+}
+
+@function b($key) {
+    @if NOT map-has-key($b, $key) {
+        @error 'Invalid key: #{$key}';
+    }
+    @return map-get($b, $key);
+}

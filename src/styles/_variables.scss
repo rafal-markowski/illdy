@@ -1,0 +1,30 @@
+$c: (
+    'white': #ffffff,
+    'black': #000000,
+    'black-2': #545454,
+    'black-3': #242320,
+    'black-4': #292825,
+    'gray': #8c979e
+) !default;
+
+$bg: (
+    'black': #000000,
+    'black-2': rgba(0, 0, 0, .2),
+    'black-3': rgba(0, 0, 0, .1),
+    'gold': #f1d204,
+    'purple': #6a4d8a
+) !default;
+
+$b: (
+    'white': 3px solid #ffffff
+) !default;
+
+$bp: (
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200
+) !default;
+
+$primary-font: 'Lato', sans-serif !default;
+$secondary-font: 'Poppins' !default;

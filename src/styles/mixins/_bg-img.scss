@@ -1,0 +1,21 @@
+@mixin bg-img($image: null, $images: null, $parallax: false) {
+    @if $image {
+        background: url($image) no-repeat center center;
+        background-size: cover;
+
+        @if $parallax {
+            background-attachment: fixed;
+        }
+    } @else if $images {
+        @each $key, $url in $images {
+            &--#{$key} {
+                background: url($url) no-repeat center center;
+                background-size: cover;
+
+                @if $parallax {
+                    background-attachment: fixed;
+                }
+            }
+        }
+    }
+}

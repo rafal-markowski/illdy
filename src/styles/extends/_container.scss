@@ -1,0 +1,20 @@
+%container {
+    margin: 0 auto;
+    padding: 0 0.875rem;
+
+    @include media-up(sm) {
+        width: 540px;
+    }
+    
+    @include media-up(md) {
+        width: 720px;
+    }
+    
+    @include media-up(lg) {
+        width: 960px;
+    }
+    
+    @include media-up(xl) {
+        width: 1140px;
+    }
+}

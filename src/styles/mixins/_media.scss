@@ -1,0 +1,38 @@
+@mixin media-up($key) {
+    @if NOT map-has-key($bp, $key) {
+        @error 'Invalid key: #{$key}';
+    } 
+
+    $min: map-get($bp, $key);
+
+    @media (min-width: #{$min}px) {
+        @content;
+    }
+}
+
+@mixin media-down($key) {
+    @if NOT map-has-key($bp, $key) {
+        @error 'Invalid key: #{$key}';
+    } 
+
+    $max: map-get($bp, $key) - 1;
+
+    @media (max-width: #{$max}px) {
+        @content;
+    }
+}
+
+@mixin media-between($key-min, $key-max) {
+    @if NOT map-has-key($bp, $key-min) {
+        @error 'Invalid key-min: #{$key-min}';
+    } @else if NOT map-has-key($bp, $key-max) {
+        @error 'Invalid key-max: #{$key-max}';
+    }
+
+    $min: map-get($bp, $key-min);
+    $max: map-get($bp, $key-max) - 1;
+
+    @media (min-width: #{$key-min}px) and (max-width: #{$key-max}px) {
+        @content;
+    }
+}
