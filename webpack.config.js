@@ -69,9 +69,9 @@ module.exports = {
         host: '0.0.0.0',
         port: 8080,
         proxy: {
-            '/static': {
+            '/src/images': {
                 target: 'http://localhost:8080',
-                pathRewrite: {'^/static' : '/src'}
+                pathRewrite: {'^/src/images' : '../src/images'}
             }
         }
     },

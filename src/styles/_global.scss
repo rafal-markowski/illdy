@@ -5,4 +5,8 @@
 body {
     font-family: $primary-font;
     color: c('white');
+
+    &.open-menu {
+        overflow: hidden;
+    }
 }

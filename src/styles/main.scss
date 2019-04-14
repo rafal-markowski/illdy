@@ -2,6 +2,7 @@
 
 @import 'functions/variables';
 
+@import 'mixins/bg-img';
 @import 'mixins/position';
 @import 'mixins/media';
 @import 'mixins/centerXY';
@@ -12,6 +13,10 @@
 @import 'extends/h3';
 @import 'extends/h4';
 @import 'extends/h5';
+@import 'extends/a';
+@import 'extends/p';
 @import 'extends/container';
 
 @import 'global';
+@import 'templates/page-header';
+@import 'templates/nav';

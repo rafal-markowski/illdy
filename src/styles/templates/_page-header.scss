@@ -1,0 +1,82 @@
+.page-header {
+    @include position($p: relative, $z: 2);
+    padding: 1.25rem 0;
+
+    &__bg {
+        @include bg-img($image: '../src/images/page-header-bg.jpg', $parallax: true);
+        @include position(absolute, 0, 0, 0, 0, -1);
+    }
+
+    &__container {
+        @extend %container;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__bottom {
+        padding-top: 3rem;
+        @include centerXY;
+    }
+
+    &__content {
+        padding: 2rem 0;
+        text-align: center;
+
+        @include media-up(md) {
+            padding: 13.75rem 0;
+        }
+    }
+
+    &__h1 {
+        @extend %h1;
+    }
+
+    &__span {
+        display: inline;
+        color: c('gold');
+    }
+
+    &__p {
+        @extend %p;
+        margin-bottom: 0.5rem;
+
+        @include media-up(md) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__white-btn, &__gold-btn {
+        @extend %btn;
+        @extend %btn--link;
+        @extend %btn--big;
+        display: block;
+        width: 240px;
+        margin: 0.75rem auto;
+
+        @include media-up(md) {
+            display: inline-block;
+            margin: 0.75rem;
+        }
+    }
+
+    &__white-btn {
+        @extend %btn--transparent;
+    }
+
+    &__gold-btn {
+        @extend %btn--gold;
+        border: 3px solid transparent;
+    }
+    
+    &__wrapper {
+        @include media-up(md) {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

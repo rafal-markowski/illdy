@@ -2,15 +2,18 @@ $c: (
     'white': #ffffff,
     'black': #000000,
     'black-2': #545454,
-    'black-3': #242320,
-    'black-4': #292825,
+    'gold': #f1d204,
     'gray': #8c979e
 ) !default;
 
 $bg: (
+    'white': #ffffff,
     'black': #000000,
     'black-2': rgba(0, 0, 0, .2),
     'black-3': rgba(0, 0, 0, .1),
+    'black-4': rgba(0, 0, 0, .75),
+    'dark': #242320,
+    'dark-2': #292825,
     'gold': #f1d204,
     'purple': #6a4d8a
 ) !default;
