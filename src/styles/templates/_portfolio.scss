@@ -1,0 +1,38 @@
+.portfolio {
+    padding-top: 4.0625rem;
+    
+    &__container {
+        @extend %container;
+        text-align: center;
+    }
+
+    &__h2 {
+        @extend %h2;
+    }
+
+    &__p {
+        @extend %gray-p;
+    }
+
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 3.25rem;
+    }
+
+    &__item {
+        flex-basis: 100%;
+
+        @include media-up(sm) {
+            flex-basis: 50%;
+        }
+
+        @include media-up(lg) {
+            flex: 1 1;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

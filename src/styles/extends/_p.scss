@@ -1,3 +1,8 @@
 %p {
     line-height: 1.625rem;
 }
+
+%gray-p {
+    @extend %p;
+    color: c('gray');
+}

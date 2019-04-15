@@ -15,9 +15,12 @@
 
     &__p {
         @extend %p;
-        width: 83%;
         margin: 0 auto;
         color: c('gray');
+
+        @include media-up(md) {
+            width: 83%;
+        }
     }
 
     &__wrapper {
