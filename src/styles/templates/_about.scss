@@ -1,0 +1,118 @@
+.about {
+    @extend %container;
+    padding-top: 4.0625rem;
+    padding-bottom: 5.3125rem;
+    text-align: center;
+
+    &__h2 {
+        @extend %h2;
+        margin-bottom: 2rem;
+
+        @include media-up(sm) {
+            margin-bottom: 3.4375rem;
+        }
+    }
+
+    &__p {
+        @extend %p;
+        width: 83%;
+        margin: 0 auto;
+        color: c('gray');
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-top: 8rem;
+        text-align: left;
+
+        @include media-down(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        position: relative;
+        flex: 1 1;
+        border-top: 3px solid #ebebeb;
+
+        &:not(:last-child) {
+            margin: 0 0 5rem;
+            
+            @include media-up(md) {
+                margin: 0 2rem 0 0;
+            }
+        }
+
+        &::before, &::after {
+            content: '';
+        }
+
+        &::before {
+            @include position($p: absolute, $t: -4px);
+            left: 0;
+            height: 5px;
+        }
+
+        &::after {
+            @include position($p: absolute, $t: -8px);
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+        }
+
+        $values: (
+            'red': 60%,
+            'purple': 86%,
+            'gold': 82%
+        );
+
+        @each $color, $percent in $values {
+            &--#{$color} {
+                color: c($color);
+
+                &::before, &::after, .about__tooltip {
+                    background: bg($color);
+                }
+
+                &::before {
+                    width: $percent;
+                }
+    
+                &::after {
+                    left: calc(#{$percent} - 12px);
+                }
+    
+                .about__tooltip {
+                    left: calc(#{$percent} - 38.5px);
+                }
+            }
+        }
+
+        &-bottom {
+            margin-top: 1rem;
+        }
+    }
+    
+    &__description {
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+
+    &__tooltip {
+        @include position($p: absolute, $t: -60px);
+        @include centerXY;
+        width: 65px;
+        height: 32px;
+        border-radius: 3px;
+        color: c('white');
+
+        &::after {
+            @include position($p: absolute, $l: calc(50% - 5px), $b: -5px, $z: -1);
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            background: inherit;
+            content: '';
+        }
+    }
+}
