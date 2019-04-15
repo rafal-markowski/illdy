@@ -33,6 +33,10 @@
 
     &__h1 {
         @extend %h1;
+
+        @media (max-width: 400px) {
+            word-break: break-all;
+        }
     }
 
     &__span {
