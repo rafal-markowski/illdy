@@ -1,0 +1,15 @@
+.testimotals {
+    @include bg-img($image: '../src/images/overlay_1.jpg');
+    padding: 3rem 0 2rem;
+
+    &__h2 {
+        @extend %h2;
+        color: c('white');
+    }
+
+    &__container {
+        @extend %container;
+        text-align: center;
+        padding: 0;
+    }
+}
