@@ -44,7 +44,7 @@
             }
 
             &__btn {
-                @include position($p: relative, $z: 2);
+                @include position($p: absolute, $t: 40px, $r: 50px, $z: 2);
                 width: 28px;
                 height: 21px;
                 margin-right: 1rem;
@@ -121,6 +121,10 @@
 
         #toggler:checked ~ .nav__menu {
             left: 0;
+        }
+
+        #toggler:checked ~ .nav__btn {
+            position: fixed;
         }
 
         #toggler {

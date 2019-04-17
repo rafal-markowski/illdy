@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const checkbox = document.querySelector('#toggler');
-    const labels = document.querySelectorAll('.nav--mobile .nav__btn');
+    const labels = document.querySelectorAll('.nav--mobile .nav__btn, .nav--mobile .nav__btn2');
     const links = document.querySelectorAll('.nav--mobile .nav__link');
 
     for(label of labels) {
