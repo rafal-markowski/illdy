@@ -1,0 +1,55 @@
+.blog {
+    padding: 3.75rem 0 3rem;
+    text-align: center;
+    background: bg('dark-3');
+
+    &__container {
+        @extend %container;
+    }
+
+    &__h2 {
+        @extend %h2;
+        color: c('white');
+    }
+
+    &__p {
+        @extend %gray-p;
+        margin-bottom: 4rem;
+    }
+
+    &__btn {
+        @extend %btn;
+        @extend %btn--link;
+        @extend %btn--gold;
+        @extend %btn--rounded;
+        padding: 1rem 2rem;
+    }
+
+    &__arrow {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+
+        @include media-up(md) {
+            justify-content: space-between;
+        }
+    }
+
+    &__post {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+        
+        @include media-up(md) {
+            flex-basis: 48%;
+        }
+
+        @include media-up(lg) {
+            flex-basis: 31%;
+        }
+    }
+}

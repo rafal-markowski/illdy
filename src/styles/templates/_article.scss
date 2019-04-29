@@ -1,0 +1,45 @@
+.article {
+    text-align: left;
+    background: bg('white');
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 200px;
+    }
+
+    &__top-link {
+        @extend %a;
+        display: inline-block;
+        padding: 2rem 3rem 0 1.5rem;
+        line-height: 1.3em;
+        color: c('black-2');
+
+        &:hover {
+            color: c('gold');
+        }
+    }
+
+    &__h3 {
+        @extend %h3;
+        margin-bottom: 0;
+    }
+
+    &__p {
+        @extend %gray-p;
+        margin: 2.5rem 0;
+    }
+
+    &__body {
+        padding: 0rem 3rem 2rem 1.5rem;
+    }
+
+    &__bottom-link {
+        @extend %a;
+        color: c('gold');
+
+        &:hover {
+            color: c('purple');
+        }
+    }
+}
