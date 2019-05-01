@@ -1,0 +1,106 @@
+.contact-us {
+    @extend %container;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    &__h2 {
+        @extend %h2;
+        text-align: center;
+    }
+
+    &__p {
+        @extend %gray-p;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 5rem;
+    }
+
+    &__item {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+
+        @include media-up(md) {
+            display: flex;
+            flex-basis: 50%;
+        }
+
+        @include media-up(lg) {
+            flex-basis: 33%;
+            
+            &--media {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__icon {
+        @extend %a;
+        display: inline-block;
+        color: c('gray');
+        margin-right: 2rem;
+    }
+
+    &__left-column {
+        @extend %p;
+        flex-basis: 200px;
+        padding-right: 1rem;
+        border-right: b('silver');
+        color: c('gold');
+
+        @include media-up(md) {
+            flex-basis: auto;
+        }
+    }
+
+    &__right-column {
+        @include media-up(md) {
+            padding-left: 1rem;
+        }
+    }
+
+    &__input {
+        @extend %input;
+    }
+
+    &__label {
+        @extend %label;
+    }
+
+    &__form-row {
+        @extend %form-row;
+    }
+
+    &__form-cell {
+        @extend %form-row;
+        flex-basis: 100%;
+
+        @include media-up(md) {
+            flex: 1 1;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__form-flex {
+        @extend %form-flex;
+    }
+
+    &__textarea {
+        @extend %textarea;
+        height: 200px;
+    }
+
+    &__submit {
+        @extend %btn;
+        @extend %btn--gold;
+        @extend %btn--rounded;
+        display: block;
+        margin-left: auto;
+    }
+}
